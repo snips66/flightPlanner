@@ -1,4 +1,4 @@
-package org.flightplanner.flightplanner;
+package org.flightplanner.flightplanner.DataObjects;
 
 public class Flight {
     private String flightNumber;

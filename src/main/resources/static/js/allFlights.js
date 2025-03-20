@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             flights.forEach(flight => {
                 const row = document.createElement("tr");
+                row.classList.add("flight-row");
 
                 row.innerHTML = `
                     <td>${flight.flightNumber}</td>
@@ -16,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${flight.time}</td>
                     <td>$${flight.price}</td>
                 `;
+
+                row.addEventListener("click", () => {
+                    window.location.href = `seating.html?flight=${flight.flightNumber}`;
+                });
 
                 tableBody.appendChild(row);
             });
