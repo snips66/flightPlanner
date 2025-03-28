@@ -20,20 +20,28 @@ h1 {
     height: 40px;
     margin: 5px;
     border: 1px solid black;
-    background-color: #007bff;
-    color: white;
+    background-color: mediumpurple;
+    color: black;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.seat:hover {
+.booked {
+    background-color: #ada5a5 !important;
+    cursor: not-allowed;
+}
+
+.window {
     background-color: #007bff;
 }
 
-.booked {
-    background-color: red !important;
-    cursor: not-allowed;
+.hasExtraLegroom {
+    background-color: orange;
+}
+
+.exitRow {
+    background-color: yellow;
 }
 
 .aisle {

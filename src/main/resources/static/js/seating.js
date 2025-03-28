@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     seatBtn.disabled = true;
                     seatBtn.classList.add("booked");
                 } else {
+                    if (seat.isWindow) seatBtn.classList.add("window");
+                    else if (seat.isHasExtraLegroom) seatBtn.classList.add("hasExtraLegroom");
+                    else if (seat.isExitRow) seatBtn.classList.add("exitRow");
                     seatBtn.onclick = () => bookSeat(flightNumber, seat.seatNumber, seatBtn);
                 }
 

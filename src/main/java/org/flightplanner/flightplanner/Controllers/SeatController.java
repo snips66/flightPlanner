@@ -15,9 +15,18 @@ public class SeatController {
         int totalSeats = 120;
 
         for (int i = 1; i <= totalSeats; i++) {
-            String seatNumber = (char) ('A' + ((i - 1) % 6)) + String.valueOf((i - 1) / 6 + 1);
+            char seatLetter = (char) ('A' + ((i - 1) % 6)); // A to F
+            int rowNumber = (i - 1) / 6 + 1; // Row number (1 to 20)
+
+            String seatNumber = seatLetter + String.valueOf(rowNumber);
             boolean isBooked = random.nextBoolean();
-            seats.add(new Seat(seatNumber, isBooked));
+            if(isBooked) {
+                seats.add(new Seat("", true, false, false, false));
+            }
+            else if (seatLetter == ('A') ||seatLetter == ('F')) seats.add(new Seat(seatNumber, false, true, false, false));
+            else if (rowNumber == 8 || rowNumber == 18) seats.add(new Seat(seatNumber, false, false, true, false));
+            else if (rowNumber == 1 ||rowNumber == 10) seats.add(new Seat(seatNumber, false, false, false, true));
+            else seats.add(new Seat(seatNumber, false, false, false, false));
         }
         return seats;
     }
