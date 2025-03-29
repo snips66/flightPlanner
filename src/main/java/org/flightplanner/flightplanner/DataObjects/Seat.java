@@ -2,6 +2,7 @@ package org.flightplanner.flightplanner.DataObjects;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+// Klass Seat, mis kirjeldab ühe istekoha omadusi
 public class Seat {
     private String seatNumber;
     private boolean isBooked;
@@ -17,7 +18,7 @@ public class Seat {
         this.isExitRow = isExitRow;
     }
 
-    @JsonProperty("isWindow")
+    @JsonProperty("isWindow") // JsonProperty on tarvilik, et front-endis saaks vastava info kätte
     public boolean isWindow() {
         return isWindow;
     }

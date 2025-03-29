@@ -7,44 +7,46 @@
     <link rel="stylesheet" href="/css/allFlights.css">
 </head>
 <body>
-<h1>Available Flights</h1>
+    <h1>Available Flights</h1>
 
-<div id="filters">
-    <label for="filterDeparture">Departure from: </label>
-    <input type="text" id="filterDeparture">
+    <!-- Filtrite sektsioon, kus kasutaja saab valida lennuotsimiseks erinevaid filtreid -->
+    <div id="filters">
+        <label for="filterDeparture">Departure from: </label>
+        <input type="text" id="filterDeparture">
 
-    <label for="filterDestination">Destination: </label>
-    <input type="text" id="filterDestination">
+        <label for="filterDestination">Destination: </label>
+        <input type="text" id="filterDestination">
 
-    <label for="filterDate">Date: </label>
-    <input type="date" id="filterDate">
+        <label for="filterDate">Date: </label>
+        <input type="date" id="filterDate">
 
-    <label for="filterTime">Time: </label>
-    <input type="time" id="filterTime">
+        <label for="filterTime">Time: </label>
+        <input type="time" id="filterTime">
 
-    <label for="filterPrice">Maximum price: </label>
-    <input type="number" id="filterPrice">
+        <label for="filterPrice">Maximum price: </label>
+        <input type="number" id="filterPrice">
 
-    <button onclick="applyFilters()">Apply filters</button>
-    <button onclick="resetFilters()">Remove filters</button>
+        <!-- Nupp filtrite rakendamiseks -->
+        <button onclick="applyFilters()">Apply filters</button>
+        <!-- Nupp filtrite eemaldamiseks (lähtestamiseks) -->
+        <button onclick="resetFilters()">Remove filters</button>
+    </div>
 
+    <!-- Lennuandmete kuvamiseks kasutatav tabel -->
+    <table id="flightsTable">
+        <thead>
+        <tr>
+            <th>Flight Number</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
 
-</div>
-
-<table id="flightsTable">
-    <thead>
-    <tr>
-        <th>Flight Number</th>
-        <th>From</th>
-        <th>To</th>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Price</th>
-    </tr>
-    </thead>
-    <tbody></tbody>
-</table>
-
-<script src="/js/allFlights.js"></script>
+    <script src="/js/allFlights.js"></script>
 </body>
 </html>

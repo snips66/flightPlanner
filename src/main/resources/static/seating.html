@@ -12,6 +12,7 @@
         <h1>Seat Selection</h1>
         <h2 id="flightInfo"></h2>
 
+        <!-- Sektsioon, kus kasutaja saab filtreerida istekohtade valikut -->
         <div class="seatFiltering">
             <label for="filterNumberOfTickets">Number of tickets</label>
             <input type="number" id="filterNumberOfTickets" value="1">
@@ -32,6 +33,7 @@
 
     </div>
 
+    <!-- Istekohtade legend, kus iga värv tähistab erinevat istekoha tüüpi -->
     <div class="seatLegend">
         <div class="legend-item">
             <span class="legend-color standard"></span> Standard Seat
@@ -53,6 +55,7 @@
         </div>
     </div>
 
+    <!-- Div, kuhu kuvatakse istekohtade graafik -->
     <div id="seating"></div>
 
     <script src="/js/seating.js"></script>

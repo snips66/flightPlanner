@@ -1,5 +1,6 @@
 package org.flightplanner.flightplanner.DataObjects;
 
+// Klass Flight, mis kirjeldab ühe lennu andmeid
 public class Flight {
     private String flightNumber;
     private String from;
