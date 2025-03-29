@@ -1,3 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
 h1 {
     color: #333;
 }
@@ -46,4 +54,46 @@ h1 {
 
 .aisle {
     width: 30px;
+}
+
+.seatSelection {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seatFiltering {
+    margin: 20px;
+}
+
+.suggested {
+    background-color: red !important;
+}
+
+.standard {
+    background-color: mediumpurple;
+}
+
+.bookedSeat {
+    background-color: #ada5a5;
+}
+
+.seatLegend {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }

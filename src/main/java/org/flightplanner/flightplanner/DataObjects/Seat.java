@@ -44,4 +44,8 @@ public class Seat {
     public void setBooked(boolean booked) {
         isBooked = booked;
     }
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
+    }
 }

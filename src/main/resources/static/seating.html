@@ -7,8 +7,52 @@
     <link rel="stylesheet" href="css/seats.css">
 </head>
 <body>
-    <h1>Seat Selection</h1>
-    <p id="flightInfo"></p>
+
+    <div class="seatSelection">
+        <h1>Seat Selection</h1>
+        <h2 id="flightInfo"></h2>
+
+        <div class="seatFiltering">
+            <label for="filterNumberOfTickets">Number of tickets</label>
+            <input type="number" id="filterNumberOfTickets" value="1">
+
+            <label for="filterWindowSeat">Window seat</label>
+            <input type="radio" id="filterWindowSeat" name="seatFilter" value="window">
+
+            <label for="filterLegroom">More legroom</label>
+            <input type="radio" id="filterLegroom" name="seatFilter" value="hasExtraLegroom">
+
+            <label for="filterNearExit">Near exit</label>
+            <input type="radio" id="filterNearExit" name="seatFilter" value="exitRow">
+
+            <button onclick="applyFilters()">Suggest seats</button>
+            <button onclick="resetFilters()">Reset filters</button>
+            <button id="bookButton" onclick="bookSelectedSeats()" style="display: none;">Book</button>
+        </div>
+
+    </div>
+
+    <div class="seatLegend">
+        <div class="legend-item">
+            <span class="legend-color standard"></span> Standard Seat
+        </div>
+        <div class="legend-item">
+            <span class="legend-color window"></span> Window Seat
+        </div>
+        <div class="legend-item">
+            <span class="legend-color exitRow"></span> Exit Row Seat
+        </div>
+        <div class="legend-item">
+            <span class="legend-color hasExtraLegroom"></span> Extra Legroom Seat
+        </div>
+        <div class="legend-item">
+            <span class="legend-color bookedSeat"></span> Booked Seat
+        </div>
+        <div class="legend-item">
+            <span class="legend-color suggested"></span> Selected Seat
+        </div>
+    </div>
+
     <div id="seating"></div>
 
     <script src="/js/seating.js"></script>

@@ -45,7 +45,8 @@ public class SeatController {
                     return "Seat already booked!";
                 }
                 seat.setBooked(true);
-                return "Seat booked successfully!";
+                seat.setSeatNumber("");
+                return "Seat " + seat.getSeatNumber() + " booked successfully!";
             }
         }
         return "Seat not found!";
